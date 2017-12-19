@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>A148422E-1D26-4032-9886-3CF2C6AFB08B</ProjectGuid>
+    <ProjectGuid>{A148422E-1D26-4032-9886-3CF2C6AFB08B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bind1</RootNamespace>
@@ -102,6 +102,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\x1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\x2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\x3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

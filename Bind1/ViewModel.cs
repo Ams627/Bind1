@@ -3,6 +3,7 @@ using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Threading;
+using System.IO;
 
 namespace Bind1
 {
@@ -16,15 +17,15 @@ namespace Bind1
         public X MyItem { get; set; }
         public ViewModel()
         {
-            var timer = new DispatcherTimer
+            var fileList = new[]
             {
-                Interval = TimeSpan.FromSeconds(1)
+                "x1.png",
+                "x2.png",
+                "x3.png"
             };
-            MyList = new List<X>
-            {
-                new X { FullPath = "q:\\temp\\x1.png"},
-                new X { FullPath = "q:\\temp\\x2.png"}
-            };
+
+            var dir = Directory.GetCurrentDirectory();
+            MyList = fileList.Select(x => new X { FullPath = Path.Combine(dir, "Images", x) }).ToList();
         }
     }
 }
